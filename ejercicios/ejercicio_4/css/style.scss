@@ -72,7 +72,18 @@ a {
     font-size: 1.2rem;
     border-bottom: 2px solid $lightBlack;
     border-top: 2px solid $lightBlack;
+    font-family: "Outfit";
+    font-weight: bold;
   }
+}
+
+.go-back-button a {
+  color: black;
+  border: 2px solid;
+  padding: 5px 30px;
+  display: flex;
+  max-width: max-content;
+  margin: 60px auto;
 }
 
 @media #{$m768} {
@@ -81,7 +92,8 @@ a {
   }
 }
 
-@media #{$m992} {  .row {
+@media #{$m992} {
+  .row {
     grid-template-columns: 25% 25% 25% 25%;
   }
 }

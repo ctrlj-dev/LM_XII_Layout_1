@@ -91,3 +91,11 @@ body {
     }
   }
 }
+.go-back-button a {
+  color: black;
+  border: 2px solid;
+  padding: 5px 30px;
+  display: flex;
+  max-width: max-content;
+  margin: 60px auto;
+}

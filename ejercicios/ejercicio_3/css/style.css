@@ -101,4 +101,17 @@ body {
     text-align: right;
   }
 }
+
+.go-back-button a {
+  color: black;
+  border: 2px solid;
+  padding: 5px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin: 60px auto;
+}
 /*# sourceMappingURL=style.css.map */

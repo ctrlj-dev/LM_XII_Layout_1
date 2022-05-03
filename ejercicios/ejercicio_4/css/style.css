@@ -191,6 +191,21 @@ a {
   font-size: 1.2rem;
   border-bottom: 2px solid #1d1a18;
   border-top: 2px solid #1d1a18;
+  font-family: "Outfit";
+  font-weight: bold;
+}
+
+.go-back-button a {
+  color: black;
+  border: 2px solid;
+  padding: 5px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin: 60px auto;
 }
 
 @media only screen and (min-width: 768px) {
