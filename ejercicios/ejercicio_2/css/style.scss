@@ -1,0 +1,79 @@
+@import "../../../library/css/media";
+@import "../../../library/css/style.scss";
+
+/*===CHOOSE YOUR THEME===*/
+$theme: themeA;
+
+.container {
+  .box {
+    flex: 0 0 33%;
+    max-width: 33%;
+    height: 200px;
+    border: 2px solid darkgray;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+
+    &:last-child {
+      background-color: white;
+    }
+  }
+}
+
+/*===THEME CONFIG===*/
+
+@if $theme == themeA {
+  .container {
+    .box {
+      background-color: red;
+
+      &:nth-child(2) {
+        background-color: darkred;
+      }
+
+      &:nth-child(3) {
+        background-color: pink;
+      }
+
+      &:last-child {
+        box-shadow: -6px 6px 6px rgba(255, 192, 203, 0.527);
+      }
+    }
+
+    h1 {
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    }
+
+    h2 {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+  }
+} @else if $theme == themeB {
+  .container {
+    .box {
+      background-color: blue;
+
+      &:nth-child(2) {
+        background-color: darkblue;
+      }
+
+      &:nth-child(3) {
+        background-color: lightblue;
+      }
+
+      &:last-child {
+        box-shadow: 6px 6px 6px rgba(139, 0, 0, 0.411);
+      }
+    }
+
+    h1 {
+      font-family: "Times New Roman", Times, serif;
+    }
+
+    h2 {
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    }
+  }
+}

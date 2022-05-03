@@ -1,0 +1,93 @@
+@import "../../../library/css/media";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+$primaryFont: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+body {
+  background-color: #282626;
+  font-family: $primaryFont;
+
+  @media screen and (min-width: 1024px) {
+    background-color: white;
+  }
+}
+
+.container {
+  height: 100vh;
+  background-color: white;
+  padding: 0 15px;
+  margin: 15px;
+
+  @media #{$m992} {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.header {
+  background-color: lightseagreen;
+
+  .header--logo {
+    padding: 15px 0;
+    background-color: white;
+
+    @media #{$m992} {
+      padding: 15px;
+    }
+  }
+
+  .nav-menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+
+    .nav-menu--button {
+      flex: 0 0 100%;
+      width: 100%;
+
+      a {
+        padding: 10px 0;
+        display: block;
+        height: 100%;
+
+        &:hover,
+        &:focus {
+          background-color: #283644;
+        }
+
+        @media #{$m992} {
+          display: inline-block;
+          padding: 10px 15px;
+        }
+      }
+
+      @media #{$m992} {
+        text-align: left;
+        flex: 0 0 25%;
+        width: 25%;
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          text-align: center;
+        }
+
+        &:last-child {
+          text-align: right;
+        }
+      }
+    }
+  }
+}

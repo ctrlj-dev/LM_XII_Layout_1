@@ -1,0 +1,66 @@
+@import "../../../library/css/media";
+@import "../../../library/css/style.scss";
+
+$orangeColor: #f15a28;
+$purpleColor: #2f1c3b;
+$yellowColor: #dbd420;
+
+/*==MIXIN==*/
+
+@mixin box($color) {
+  .base-color {
+    background-color: $color;
+    color: white;
+  }
+  @for $i from 1 through 4 {
+    .darken-#{$i} {
+      background-color: darken($color, $amount: 7 * $i);
+      color: darken(#dadada, $amount: 7 * $i);
+    }
+    .lighten-#{$i} {
+      background-color: lighten($color, $amount: 7 * $i);
+      color: lighten(#dadada, $amount: 7 * $i);
+    }
+  }
+}
+
+/*==CONTENIDO==*/
+.box {
+  flex: 0 0 10%;
+  width: 10%;
+  min-height: 150px;
+  margin: 15px 0;
+  padding: 10px 15px 0 15px;
+  border-radius: 2px;
+  text-align: center;
+  &.base-color {
+    flex: 0 0 12%;
+    width: 12%;
+  }
+  p {
+    border-bottom: 1px solid;
+    width: 100%;;
+    text-align: left;
+    padding-bottom: 5px;
+    text-transform: capitalize;
+    display: none;   
+    font-weight: bold;
+    @media #{$m992} {
+        display: block;
+    }
+  }
+}
+.color-section:first-child {
+  @include box($orangeColor);
+}
+
+.color-section:nth-child(2n) {
+  @include box($purpleColor);
+}
+
+.color-section:nth-child(3n) {
+  @include box($yellowColor);
+  p {
+    color: black;
+  }
+}
